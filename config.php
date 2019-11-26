@@ -6,9 +6,10 @@ $host = "localhost"; /* Host name */
 $user = "root"; /* User */
 $password = ""; /* Password */
 $dbname = "tutorial"; /* Database name */
-
-$con = mysqli_connect($host, $user, $password,$dbname);
+$port = '';
+$con = pg_connect("host=$host port=<port> dbname=$dbname user=$user password=$password");
 // Check connection
 if (!$con) {
- die("Connection failed: " . mysqli_connect_error());
+    echo "An error occurred.\n";
+    exit;
 }
