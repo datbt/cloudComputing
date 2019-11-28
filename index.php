@@ -9,7 +9,7 @@ if(isset($_POST['but_submit'])){
 
 
     if ($uname != "" && $password != ""){
-        $sql_query = "select count(*) as cntUser from users where username='".$uname."' and password='".$password."'";
+        $sql_query = "select count(*) as cntUser from users where username='".$uname."' and pass='".$password."'";
         $result = pg_query($con,$sql_query);
         $row = pg_fetch_assoc($result);
 
