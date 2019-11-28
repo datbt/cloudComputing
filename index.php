@@ -13,9 +13,8 @@ if(isset($_POST['but_submit'])){
         $result = pg_query($con,$sql_query);
         $row = pg_fetch_assoc($result);
 
-        $count = $row['cntUser'];
 
-        if($count > 0){
+        if($row['username']){
             $_SESSION['uname'] = $uname;
             header('Location: home.php');
         }else{
@@ -25,7 +24,6 @@ if(isset($_POST['but_submit'])){
     }
 
 }
-var_dump($result)
 ?>
 <html>
     <head>

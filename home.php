@@ -14,11 +14,15 @@ if(isset($_POST['but_logout'])){
 ?>
 <!doctype html>
 <html>
-    <head></head>
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
     <body>
         <h1>Homepage</h1>
         <form method='post' action="">
             <input type="submit" value="Logout" name="but_logout">
         </form>
+        <div class="body-background">
+        </div>
     </body>
 </html>
